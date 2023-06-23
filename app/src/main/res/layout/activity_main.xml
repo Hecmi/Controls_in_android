@@ -46,7 +46,7 @@
         android:maxLength="10" />
 
     <TextView
-        android:id="@+id/lblCedula3"
+        android:id="@+id/lblNombre"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -57,7 +57,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/lblCedula2"
+        android:id="@+id/lblFechaNac"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -91,7 +91,7 @@
         android:maxLength="200" />
 
     <TextView
-        android:id="@+id/lblCedula4"
+        android:id="@+id/lblCiudad"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -102,7 +102,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/lblCedula6"
+        android:id="@+id/lblGenero"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -150,7 +150,7 @@
         android:inputType="phone" />
 
     <TextView
-        android:id="@+id/lblCedula5"
+        android:id="@+id/lblCorreo"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"
@@ -162,7 +162,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/lblCedula7"
+        android:id="@+id/lblTelefono"
         android:layout_width="107dp"
         android:layout_height="35dp"
         android:layout_alignParentStart="true"

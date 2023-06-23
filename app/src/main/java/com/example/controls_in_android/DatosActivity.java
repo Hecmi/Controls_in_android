@@ -19,13 +19,11 @@ public class DatosActivity extends AppCompatActivity {
         txtDatosEnviados.setText(
                 "Cédula: " + b.getString("CEDULA") + "\n" +
                 "Nombres: " + b.getString("NOMBRES") + "\n" +
-                "Fecha de Nacimiento: " + b.getString("CEDULA") + "\n" +
+                "Fecha de Nacimiento: " + b.getString("FECHA_NAC") + "\n" +
                 "Ciudad: " + b.getString("CIUDAD") + "\n" +
                 "Género: " + b.getString("GENERO") + "\n" +
                 "Correo: " + b.getString("CORREO") + "\n" +
                 "Teléfono: " + b.getString("TELEFONO")
         );
-
-
     }
 }

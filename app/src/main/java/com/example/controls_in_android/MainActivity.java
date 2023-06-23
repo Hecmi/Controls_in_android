@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean validar_datos(){
+        //Guardar en variables los valores que tienen los componentes
         String cedula = txtCedula.getText().toString();
         String nombre = txtNombre.getText().toString();
         String fechaNac = txtFechaNac.getText().toString();
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         //Obtener el id del checkbox activado: -1 si no hay ninguno activado
         int id_check_selected = rgGenero.getCheckedRadioButtonId();
 
+        //Validaciones de cédula
         if(cedula.isEmpty()){
             txtError.setText("Ingrese su número de cédula.");
             return false;
@@ -65,12 +67,15 @@ public class MainActivity extends AppCompatActivity {
             txtError.setText("Número de cédla inválido.");
             return false;
         }
+
+        //Validaciones de nombre
         if(nombre.isEmpty()){
             txtError.setText("Ingrese su nombre.");
             return false;
         }
 
-        String regex_fechaNac = "^(.+)/(.+)/(.+)$";
+        //Validaciones de fecha de nacimiento
+        String regex_fechaNac = "^[0-9]{1,2}\\/[0-9]{1,2}\\/[0-9]{4}$";
         Pattern pattern = Pattern.compile(regex_fechaNac);
 
         if(!pattern.matcher(fechaNac).matches()){
@@ -81,17 +86,21 @@ public class MainActivity extends AppCompatActivity {
             txtError.setText("Ingrese su fecha de nacimiento.");
             return false;
         }
+
+        //Validaciones de ciudad
         if(ciudad.isEmpty()){
             txtError.setText("Ingrese la ciudad en la que reside.");
             return false;
         }
+
+        //Validaciones para género
         if(id_check_selected == -1){
             txtError.setText("Seleccione su género.");
             return false;
         }
 
         //Validaciones para el email:
-        String regex_email = "^(.+)@(.+)$";
+        String regex_email = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
         pattern = Pattern.compile(regex_email);
 
         if(!pattern.matcher(correo).matches()){
@@ -107,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
-
+        //Validaciones de télefono
         if(telefono.isEmpty()){
             txtError.setText("Ingrese su número de teléfono.");
             return false;
@@ -136,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, DatosActivity.class);
             intent.putExtras(b);
 
+            //Iniciar la actividad
             startActivity(intent);
         }
     }
